@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Boda de [Nombre] & [Nombre]</title>
+  <meta name="description" content="Nos casamos. Únete a nuestra celebración el [fecha].">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: 'var(--color-primary)',
+            accent: 'var(--color-accent)',
+            bg: 'var(--color-bg)',
+            text: 'var(--color-text)',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico">
+</head>
+<body class="bg-bg text-text font-body antialiased">
+
+  <!-- ========== HERO ========== -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="assets/hero.jpg" alt="" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+    
+    <div class="relative z-10 text-center text-white px-4 fade-in-section">
+      <p class="text-sm uppercase tracking-[0.3em] mb-4 opacity-80">Nos casamos</p>
+      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-2">
+        <span class="block">Nombre</span>
+        <span class="block italic font-normal">&</span>
+        <span class="block">Nombre</span>
+      </h1>
+      <p class="text-xl md:text-2xl mt-6 opacity-90">15 de Agosto de 2026</p>
+      <a href="#rsvp" class="inline-block mt-10 px-8 py-3 bg-primary text-white font-medium tracking-wide rounded transition-all hover:bg-primary/90 hover:scale-105">
+        Confirmar Asistencia
+      </a>
+    </div>
+    
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========== COUNTDOWN ========== -->
+  <section id="countdown" class="py-20 bg-accent text-white text-center">
+    <div class="max-w-4xl mx-auto px-4 fade-in-section">
+      <h2 class="font-display text-3xl md:text-4xl mb-12">La cuenta regresiva</h2>
+      
+      <div id="countdown-container" class="grid grid-cols-4 gap-4 md:gap-8">
+        <div class="countdown-item">
+          <span id="days" class="block text-5xl md:text-7xl font-display font-bold">000</span>
+          <span class="block uppercase tracking-widest text-sm mt-2 opacity-70">Días</span>
+        </div>
+        <div class="countdown-item">
+          <span id="hours" class="block text-5xl md:text-7xl font-display font-bold">00</span>
+          <span class="block uppercase tracking-widest text-sm mt-2 opacity-70">Horas</span>
+        </div>
+        <div class="countdown-item">
+          <span id="minutes" class="block text-5xl md:text-7xl font-display font-bold">00</span>
+          <span class="block uppercase tracking-widest text-sm mt-2 opacity-70">Minutos</span>
+        </div>
+        <div class="countdown-item">
+          <span id="seconds" class="block text-5xl md:text-7xl font-display font-bold">00</span>
+          <span class="block uppercase tracking-widest text-sm mt-2 opacity-70">Segundos</span>
+        </div>
+      </div>
+      
+      <div id="countdown-message" class="hidden">
+        <p class="font-display text-4xl md:text-5xl animate-pulse">¡Hoy es el gran día!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INFO ========== -->
+  <section id="info" class="py-20 bg-bg">
+    <div class="max-w-4xl mx-auto px-4 fade-in-section">
+      <h2 class="font-display text-3xl md:text-4xl text-center mb-16">Información</h2>
+      
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Ceremony -->
+        <div class="text-center md:text-left">
+          <svg class="w-12 h-12 mx-auto md:mx-0 mb-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+          </svg>
+          <h3 class="font-display text-2xl mb-2">Ceremonia</h3>
+          <p class="text-lg font-medium">Parroquia de San José</p>
+          <p class="opacity-70">Calle Principal 123, Centro</p>
+          <p class="mt-2 font-medium">4:00 PM</p>
+        </div>
+        
+        <!-- Reception -->
+        <div class="text-center md:text-left">
+          <svg class="w-12 h-12 mx-auto md:mx-0 mb-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+            <path d="M9 22V12h6v10"/>
+          </svg>
+          <h3 class="font-display text-2xl mb-2">Recepción</h3>
+          <p class="text-lg font-medium">Salón de Fiestas Arcoíris</p>
+          <p class="opacity-70">Avenida de las Flores 456</p>
+          <p class="mt-2 font-medium">6:00 PM</p>
+        </div>
+        
+        <!-- Dress Code -->
+        <div class="text-center md:text-left">
+          <svg class="w-12 h-12 mx-auto md:mx-0 mb-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M12 8v4M12 16h.01"/>
+          </svg>
+          <h3 class="font-display text-2xl mb-2">Código de Vestimenta</h3>
+          <p class="text-lg">Formal</p>
+          <p class="opacity-70 mt-1">Traje de etiqueta sugerido</p>
+        </div>
+        
+        <!-- Directions -->
+        <div class="text-center md:text-left">
+          <svg class="w-12 h-12 mx-auto md:mx-0 mb-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <h3 class="font-display text-2xl mb-2">Cómo Llegar</h3>
+          <p class="opacity-70">Estacionamiento gratuito disponible</p>
+          <p class="mt-2">Siguenos en Google Maps para llegar fácilmente</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section id="gallery" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 fade-in-section">
+      <h2 class="font-display text-3xl md:text-4xl text-center mb-12">Nuestros Momentos</h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square">
+          <img src="assets/gallery/01.jpg" alt="Foto 1" class="w-full h-full object-cover transition-transform hover:scale-105" loading="lazy">
+        </div>
+        <div class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square">
+          <img src="assets/gallery/02.jpg" alt="Foto 2" class="w-full h-full object-cover transition-transform hover:scale-105" loading="lazy">
+        </div>
+        <div class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square">
+          <img src="assets/gallery/03.jpg" alt="Foto 3" class="w-full h-full object-cover transition-transform hover:scale-105" loading="lazy">
+        </div>
+        <div class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square">
+          <img src="assets/gallery/04.jpg" alt="Foto 4" class="w-full h-full object-cover transition-transform hover:scale-105" loading="lazy">
+        </div>
+        <div class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square">
+          <img src="assets/gallery/05.jpg" alt="Foto 5" class="w-full h-full object-cover transition-transform hover:scale-105" loading="lazy">
+        </div>
+        <div class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square">
+          <img src="assets/gallery/06.jpg" alt="Foto 6" class="w-full h-full object-cover transition-transform hover:scale-105" loading="lazy">
+        </div>
+        <div class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square hidden md:block">
+          <img src="assets/gallery/07.jpg" alt="Foto 7" class="w-full h-full object-cover transition-transform hover:scale-105" loading="lazy">
+        </div>
+        <div class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square hidden md:block">
+          <img src="assets/gallery/08.jpg" alt="Foto 8" class="w-full h-full object-cover transition-transform hover:scale-105" loading="lazy">
+        </div>
+        <div class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square hidden md:block">
+          <img src="assets/gallery/09.jpg" alt="Foto 9" class="w-full h-full object-cover transition-transform hover:scale-105" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/95 hidden items-center justify-center" role="dialog" aria-modal="true">
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white opacity-70 hover:opacity-100 transition-opacity" aria-label="Cerrar">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white opacity-70 hover:opacity-100 transition-opacity" aria-label="Anterior">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+    </button>
+    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white opacity-70 hover:opacity-100 transition-opacity" aria-label="Siguiente">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </button>
+    <img id="lightbox-img" src="" alt="" class="max-w-[90vw] max-h-[90vh] object-contain rounded">
+    <div id="lightbox-counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white opacity-70 text-sm"></div>
+  </div>
+
+  <!-- ========== RSVP ========== -->
+  <section id="rsvp" class="py-20 bg-bg">
+    <div class="max-w-xl mx-auto px-4 fade-in-section">
+      <h2 class="font-display text-3xl md:text-4xl text-center mb-4">Confirma tu Asistencia</h2>
+      <p class="text-center opacity-70 mb-12">Por favor, confirma antes del 1 de Julio de 2026</p>
+      
+      <form id="rsvp-form" class="space-y-6" action="https://formspree.io/f/TU_FORM_ID" method="POST">
+        <div>
+          <label for="nombre" class="block font-medium mb-2">Nombre Completo *</label>
+          <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="Ej: María García">
+          <span class="text-red-500 text-sm mt-1 hidden">Por favor, ingresa tu nombre completo</span>
+        </div>
+        
+        <div>
+          <label for="email" class="block font-medium mb-2">Correo Electrónico *</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="Ej: maria@email.com">
+          <span class="text-red-500 text-sm mt-1 hidden">Por favor, ingresa un correo válido</span>
+        </div>
+        
+        <div>
+          <label for="asistentes" class="block font-medium mb-2">Número de Asistentes *</label>
+          <select id="asistentes" name="asistentes" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all bg-white">
+            <option value="">Selecciona...</option>
+            <option value="1">1 persona</option>
+            <option value="2">2 personas</option>
+            <option value="3">3 personas</option>
+            <option value="4">4 personas</option>
+            <option value="5">5+ personas (especificar en mensaje)</option>
+          </select>
+          <span class="text-red-500 text-sm mt-1 hidden">Por favor, selecciona el número de asistentes</span>
+        </div>
+        
+        <div>
+          <label for="restricciones" class="block font-medium mb-2">Restricciones Alimentarias</label>
+          <textarea id="restricciones" name="restricciones" rows="3" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none" placeholder="Ej: Vegetarianos, alérgicos a frutos secos, etc."></textarea>
+        </div>
+        
+        <button type="submit" class="w-full py-4 bg-primary text-white font-medium text-lg rounded-lg hover:bg-primary/90 transition-all hover:scale-[1.02]">
+          Enviar Confirmación
+        </button>
+      </form>
+      
+      <!-- Success Message -->
+      <div id="rsvp-success" class="hidden text-center py-12">
+        <svg class="w-16 h-16 mx-auto mb-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <h3 class="font-display text-2xl mb-2">¡Gracias por confirmar!</h3>
+        <p class="opacity-70">Hemos recibido tu confirmación. Te esperamos con mucho cariño.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MAP ========== -->
+  <section id="map" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 fade-in-section">
+      <h2 class="font-display text-3xl md:text-4xl text-center mb-12">Ubicación</h2>
+      
+      <div class="rounded-lg overflow-hidden shadow-lg">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.6614!2d-99.1681!3d19.4326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDI1JzUzLjQiTiA5OcKwMTAnMDcuNyJX!5e0!3m2!1ses!2smx!4v1234567890"
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de la boda">
+        </iframe>
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="https://maps.google.com/?q=Parroquia+de+San+José" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-all">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          Abrir en Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="py-12 bg-accent text-white text-center">
+    <p class="font-display text-2xl mb-2">Nombre & Nombre</p>
+    <p class="opacity-70">15 de Agosto de 2026</p>
+    <p class="mt-6 text-sm opacity-50">Hecho con amor para nuestra boda</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
