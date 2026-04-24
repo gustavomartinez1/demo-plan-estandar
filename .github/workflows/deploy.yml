@@ -19,37 +19,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-        # Note: For this template, no build step needed.
-        # Remove or modify this step if you add a build process.
-
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
           api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          project-name: ${{ vars.CLOUDFLARE_PROJECT_NAME || 'veltrux-wedding-standard' }}
+          project-name: demo-plan-estandar
           directory: ./
-          git-depth: 0
 
       - name: Show preview URL
         if: github.event_name == 'pull_request'
         run: |
           echo "Preview URL: ${{ steps.deploy.outputs.url }}"
-
-# For production deployment with approval:
-# 1. Go to repository Settings > Environments
-# 2. Create a new environment called "production"
-# 3. Add required secrets: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID
-# 4. Enable "Required reviewers" and add yourself or team members
-# 5. Update the workflow to reference the production environment
