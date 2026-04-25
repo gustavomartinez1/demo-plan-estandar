@@ -48,14 +48,14 @@
     </div>
     
     <div class="relative z-10 text-center text-white px-4 fade-in-section">
-      <p class="text-sm uppercase tracking-[0.3em] mb-4 opacity-80">Nos casamos</p>
+      <p class="text-sm uppercase tracking-[0.3em] mb-4 opacity-90">¡Nos Casamos!</p>
       <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-2">
-        <span class="block">Nombre</span>
-        <span class="block italic font-normal">&</span>
-        <span class="block">Nombre</span>
+        <span class="block">Sofía</span>
+        <span class="block italic font-light">&</span>
+        <span class="block">Andrés</span>
       </h1>
-      <p class="text-xl md:text-2xl mt-6 opacity-90">15 de Agosto de 2026</p>
-      <a href="#rsvp" class="inline-block mt-10 px-8 py-3 bg-primary text-white font-medium tracking-wide rounded transition-all hover:bg-primary/90 hover:scale-105">
+      <p class="text-xl md:text-2xl mt-6 opacity-90">15 de Agosto • 2026 • 4:00 PM</p>
+      <a href="#rsvp" class="inline-block mt-10 px-8 py-3 bg-white/20 backdrop-blur-sm text-white font-medium tracking-wide rounded-full border border-white/30 transition-all hover:bg-white/30 hover:scale-105">
         Confirmar Asistencia
       </a>
     </div>
@@ -68,26 +68,27 @@
   </section>
 
   <!-- ========== COUNTDOWN ========== -->
-  <section id="countdown" class="py-20 bg-accent text-white text-center">
+  <section id="countdown" class="py-20 text-center" style="background: linear-gradient(135deg, #C17C74 0%, #A67B5B 100%);">
     <div class="max-w-4xl mx-auto px-4 fade-in-section">
-      <h2 class="font-display text-3xl md:text-4xl mb-12">La cuenta regresiva</h2>
+      <h2 class="font-display text-3xl md:text-4xl mb-4 text-white">La Cuenta Regresiva</h2>
+      <p class="text-center text-white/80 mb-12">15 de Agosto de 2026</p>
       
       <div id="countdown-container" class="grid grid-cols-4 gap-4 md:gap-8">
         <div class="countdown-item">
-          <span id="days" class="block text-5xl md:text-7xl font-display font-bold">000</span>
-          <span class="block uppercase tracking-widest text-sm mt-2 opacity-70">Días</span>
+          <span id="days" class="block text-5xl md:text-7xl font-display font-bold text-white">000</span>
+          <span class="block uppercase tracking-widest text-sm mt-2 text-white/70">Días</span>
         </div>
         <div class="countdown-item">
-          <span id="hours" class="block text-5xl md:text-7xl font-display font-bold">00</span>
-          <span class="block uppercase tracking-widest text-sm mt-2 opacity-70">Horas</span>
+          <span id="hours" class="block text-5xl md:text-7xl font-display font-bold text-white">00</span>
+          <span class="block uppercase tracking-widest text-sm mt-2 text-white/70">Horas</span>
         </div>
         <div class="countdown-item">
-          <span id="minutes" class="block text-5xl md:text-7xl font-display font-bold">00</span>
-          <span class="block uppercase tracking-widest text-sm mt-2 opacity-70">Minutos</span>
+          <span id="minutes" class="block text-5xl md:text-7xl font-display font-bold text-white">00</span>
+          <span class="block uppercase tracking-widest text-sm mt-2 text-white/70">Minutos</span>
         </div>
         <div class="countdown-item">
-          <span id="seconds" class="block text-5xl md:text-7xl font-display font-bold">00</span>
-          <span class="block uppercase tracking-widest text-sm mt-2 opacity-70">Segundos</span>
+          <span id="seconds" class="block text-5xl md:text-7xl font-display font-bold text-white">00</span>
+          <span class="block uppercase tracking-widest text-sm mt-2 text-white/70">Segundos</span>
         </div>
       </div>
       
@@ -98,54 +99,60 @@
   </section>
 
   <!-- ========== INFO ========== -->
-  <section id="info" class="py-20 bg-bg">
+  <section id="info" class="py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 fade-in-section">
-      <h2 class="font-display text-3xl md:text-4xl text-center mb-16">Información</h2>
+      <h2 class="font-display text-3xl md:text-4xl text-center mb-16">Detalles del Gran Día</h2>
       
       <div class="grid md:grid-cols-2 gap-12">
         <!-- Ceremony -->
-        <div class="text-center md:text-left">
-          <svg class="w-12 h-12 mx-auto md:mx-0 mb-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-          </svg>
-          <h3 class="font-display text-2xl mb-2">Ceremonia</h3>
-          <p class="text-lg font-medium">Parroquia de San José</p>
-          <p class="opacity-70">Calle Principal 123, Centro</p>
-          <p class="mt-2 font-medium">4:00 PM</p>
+        <div class="text-center p-8 rounded-2xl bg-stone-50">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #C17C74 0%, #A67B5B 100%);">
+            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-2xl mb-2">Ceremonia Religiosa</h3>
+          <p class="text-lg font-medium">Parroquia San Miguel Arcángel</p>
+          <p class="text-gray-500">Av. Principal 123, Col. Centro</p>
+          <p class="mt-3 font-semibold" style="color: #C17C74;">4:00 PM</p>
         </div>
         
         <!-- Reception -->
-        <div class="text-center md:text-left">
-          <svg class="w-12 h-12 mx-auto md:mx-0 mb-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
-            <path d="M9 22V12h6v10"/>
-          </svg>
+        <div class="text-center p-8 rounded-2xl bg-stone-50">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #C17C74 0%, #A67B5B 100%);">
+            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+              <path d="M9 22V12h6v10"/>
+            </svg>
+          </div>
           <h3 class="font-display text-2xl mb-2">Recepción</h3>
-          <p class="text-lg font-medium">Salón de Fiestas Arcoíris</p>
-          <p class="opacity-70">Avenida de las Flores 456</p>
-          <p class="mt-2 font-medium">6:00 PM</p>
+          <p class="text-lg font-medium">Salón de Eventos "El Jardín"</p>
+          <p class="text-gray-500">Carretera a Chapalilla Km. 5</p>
+          <p class="mt-3 font-semibold" style="color: #C17C74;">6:00 PM - 11:00 PM</p>
         </div>
         
         <!-- Dress Code -->
-        <div class="text-center md:text-left">
-          <svg class="w-12 h-12 mx-auto md:mx-0 mb-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <path d="M12 8v4M12 16h.01"/>
-          </svg>
+        <div class="text-center p-8 rounded-2xl bg-stone-50">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #C17C74 0%, #A67B5B 100%);">
+            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
           <h3 class="font-display text-2xl mb-2">Código de Vestimenta</h3>
-          <p class="text-lg">Formal</p>
-          <p class="opacity-70 mt-1">Traje de etiqueta sugerido</p>
+          <p class="text-lg font-medium">Formal Elegante</p>
+          <p class="text-gray-500 mt-1">Trajes largos y esmokies sugeridos</p>
         </div>
         
-        <!-- Directions -->
-        <div class="text-center md:text-left">
-          <svg class="w-12 h-12 mx-auto md:mx-0 mb-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
-          <h3 class="font-display text-2xl mb-2">Cómo Llegar</h3>
-          <p class="opacity-70">Estacionamiento gratuito disponible</p>
-          <p class="mt-2">Siguenos en Google Maps para llegar fácilmente</p>
+        <!-- Registry -->
+        <div class="text-center p-8 rounded-2xl bg-stone-50">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #C17C74 0%, #A67B5B 100%);">
+            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-2xl mb-2">Mesa de Regalos</h3>
+          <p class="text-gray-500">Tu presencia es nuestro mejor regalo</p>
+          <p class="text-gray-400 text-sm mt-2">Sobre disponible en la recepción</p>
         </div>
       </div>
     </div>
@@ -213,7 +220,7 @@
   <section id="rsvp" class="py-20 bg-bg">
     <div class="max-w-xl mx-auto px-4 fade-in-section">
       <h2 class="font-display text-3xl md:text-4xl text-center mb-4">Confirma tu Asistencia</h2>
-      <p class="text-center opacity-70 mb-12">Por favor, confirma antes del 1 de Julio de 2026</p>
+      <p class="text-center text-gray-500 mb-12">Por favor, confirma antes del <strong>1 de Julio de 2026</strong></p>
       
       <form id="rsvp-form" class="space-y-6" action="https://formspree.io/f/TU_FORM_ID" method="POST">
         <div>
@@ -293,10 +300,10 @@
   </section>
 
   <!-- ========== FOOTER ========== -->
-  <footer class="py-12 bg-accent text-white text-center">
-    <p class="font-display text-2xl mb-2">Nombre & Nombre</p>
-    <p class="opacity-70">15 de Agosto de 2026</p>
-    <p class="mt-6 text-sm opacity-50">Hecho con amor para nuestra boda</p>
+  <footer class="py-12 text-center" style="background: linear-gradient(135deg, #C17C74 0%, #A67B5B 100%);">
+    <p class="font-display text-2xl mb-2 text-white">Sofía & Andrés</p>
+    <p class="text-white/80">15 de Agosto de 2026</p>
+    <p class="mt-6 text-sm text-white/50">Te esperamos en nuestro gran día</p>
   </footer>
 
   <script src="main.js"></script>
